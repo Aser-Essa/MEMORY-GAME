@@ -6,7 +6,11 @@ let spans = []
 
 let startButton = document.querySelector(".start button")
 
-// sessionStorage.setItem("count" , 0)
+if(sessionStorage.getItem("count")) {
+    console.log(true)
+} else {
+    sessionStorage.setItem("count" , 0)
+}
 
 if (sessionStorage.getItem("count") == 0) {
     startButton.onclick = function () {
